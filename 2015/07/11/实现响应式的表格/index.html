@@ -4,22 +4,35 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>左，右</title>
+    <title>实现响应式的表格 | 左，右</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="He Gang">
     
 
     
-    <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="左，右">
-<meta property="og:url" content="http://blog.hegang.me/index.html">
+    <meta name="description" content="如何在移动端更好显示表格今天看到，看到“堆叠”的方式显示表格，瞬间感觉高大上，纯css实现。然后对他的实现方式研究了一下。
+当屏幕打到需要”堆叠”方式显示的时候，则更换样式。类似于sql中的行转列的效果。
+td中需要一个属性(这里是data-label)，记录列属性的值。
+&amp;lt;td data-label=&quot;Payment&quot;&amp;gt;Payment #1&amp;lt;/td&amp;gt;
+&amp;lt;td dat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实现响应式的表格">
+<meta property="og:url" content="http://blog.hegang.me/2015/07/11/实现响应式的表格/index.html">
 <meta property="og:site_name" content="左，右">
-<meta property="og:description">
+<meta property="og:description" content="如何在移动端更好显示表格今天看到，看到“堆叠”的方式显示表格，瞬间感觉高大上，纯css实现。然后对他的实现方式研究了一下。
+当屏幕打到需要”堆叠”方式显示的时候，则更换样式。类似于sql中的行转列的效果。
+td中需要一个属性(这里是data-label)，记录列属性的值。
+&amp;lt;td data-label=&quot;Payment&quot;&amp;gt;Payment #1&amp;lt;/td&amp;gt;
+&amp;lt;td dat">
+<meta property="og:updated_time" content="2015-07-11T06:20:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="左，右">
-<meta name="twitter:description">
+<meta name="twitter:title" content="实现响应式的表格">
+<meta name="twitter:description" content="如何在移动端更好显示表格今天看到，看到“堆叠”的方式显示表格，瞬间感觉高大上，纯css实现。然后对他的实现方式研究了一下。
+当屏幕打到需要”堆叠”方式显示的时候，则更换样式。类似于sql中的行转列的效果。
+td中需要一个属性(这里是data-label)，记录列属性的值。
+&amp;lt;td data-label=&quot;Payment&quot;&amp;gt;Payment #1&amp;lt;/td&amp;gt;
+&amp;lt;td dat">
 
     
     
@@ -71,12 +84,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2015/07/11/实现响应式的表格/" title="实现响应式的表格" itemprop="url">实现响应式的表格</a>
@@ -90,9 +101,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h1 id="如何在移动端更好显示表格">如何在移动端更好显示表格</h1><p>今天看到，看到“堆叠”的方式显示表格，瞬间感觉高大上，纯css实现。然后对他的实现方式研究了一下。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何在移动端更好显示表格"><span class="toc-number">1.</span> <span class="toc-text">如何在移动端更好显示表格</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="如何在移动端更好显示表格">如何在移动端更好显示表格</h1><p>今天看到，看到“堆叠”的方式显示表格，瞬间感觉高大上，纯css实现。然后对他的实现方式研究了一下。</p>
 <p><strong>当屏幕打到需要”堆叠”方式显示的时候，则更换样式。类似于sql中的行转列的效果。</strong></p>
 <p>td中需要一个属性(这里是<strong><em>data-label</em></strong>)，记录列属性的值。</p>
 <pre><code><span class="tag">&lt;<span class="title">td</span> <span class="attribute">data-label</span>=<span class="value">"Payment"</span>&gt;</span>Payment #1<span class="tag">&lt;/<span class="title">td</span>&gt;</span>
@@ -140,14 +158,9 @@
 </code></pre><p>效果预览，手机电脑分别访问效果更明显（<a href="http://sandbox.runjs.cn/show/4xrfqbz1" target="_blank" rel="external">点击这里</a>）</p>
 <p>源码(<a href="http://codepen.io/anon/pen/QwPVNW" target="_blank" rel="external">点我，点我</a>)</p>
 <p>更精彩(<a href="https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/" target="_blank" rel="external">点我，点我</a>)</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -160,84 +173,47 @@
 
 
 
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://blog.hegang.me/2015/07/11/实现响应式的表格/" data-title="实现响应式的表格 | 左，右" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
 
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/07/11/实现响应式的表格/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/11/实现响应式的表格/" data-count-type="comments">&nbsp;</a>
-	
-</div>
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/08/第一篇博客/" title="第一篇博客" itemprop="url">第一篇博客</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="He Gang" target="_blank" itemprop="author">He Gang</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-08T12:54:44.000Z" itemprop="datePublished"> 发表于 2015-07-08</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="博客系统初步搭建完成，以后常驻这里了。哈哈哈哈哈~">博客系统初步搭建完成，以后常驻这里了。哈哈哈哈哈<del>~</del></h1>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/生活/">生活</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
-	  	<span></span>
-		<a href="/2015/07/08/第一篇博客/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/08/第一篇博客/" data-count-type="comments">&nbsp;</a>
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/07/08/第一篇博客/"  title="第一篇博客">
+ <strong>下一篇：</strong><br/> 
+ <span>第一篇博客
+</span>
+</a>
+</div>
+
+</nav>
+
 	
-</div>
-
-</footer>
-
-
-    </article>
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/07/11/实现响应式的表格/" data-title="实现响应式的表格" data-url="http://blog.hegang.me/2015/07/11/实现响应式的表格/"></div>
+</section>
 
 
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何在移动端更好显示表格"><span class="toc-number">1.</span> <span class="toc-text">如何在移动端更好显示表格</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -360,12 +336,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -438,4 +491,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
