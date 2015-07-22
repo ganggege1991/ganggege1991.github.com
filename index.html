@@ -79,6 +79,72 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/07/22/在移动端区分iPhone，Android/" title="在移动端区分iPhone，Adroid" itemprop="url">在移动端区分iPhone，Adroid</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="He Gang" target="_blank" itemprop="author">He Gang</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-22T12:57:19.000Z" itemprop="datePublished"> 发表于 2015-07-22</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="在浏览器的移动端区分iPhone，Android">在浏览器的移动端区分iPhone，Android</h1><p>业务需求:需要通过压面下载app，Android下载Android的app，iPhone则跳到AppStore。<br>解决方案:通过浏览器的navigator对象，可以获取到设备，操作系统的一些相关的信息(包括系统版本号)。通过这些信息则可以做出判断。</p>
+<p><strong>首先</strong></p>
+<p>打印出navidator对象，分析一下。</p>
+<p><img src="http://7xk6zw.com1.z0.glb.clouddn.com/浏览器的navigator对象" alt="navigator浏览器对象"></p>
+<p><strong><em>如下</em></strong></p>
+<pre><code>var s = navigator.userAgent;
+<span class="keyword">if</span><span class="params">(s.indexOf<span class="params">(<span class="string">"Android"</span>)</span>&gt;<span class="number">0</span>)</span>{
+ <span class="comment">//Android;</span>
+}
+<span class="keyword">else</span> <span class="keyword">if</span><span class="params">(s.indexOf<span class="params">(<span class="string">"iPhone"</span>)</span>&gt;<span class="number">0</span>)</span>{
+ <span class="comment">//iPhone;</span>
+}
+</code></pre><p><strong><em>实测</em></strong></p>
+<p><a href="http://sandbox.runjs.cn/show/axfldnow" target="_blank" rel="external">点击这里</a>hexo</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/07/22/在移动端区分iPhone，Android/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/22/在移动端区分iPhone，Android/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/07/11/实现响应式的表格/" title="实现响应式的表格" itemprop="url">实现响应式的表格</a>
   </h1>
   <p class="article-author">By

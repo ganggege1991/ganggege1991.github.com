@@ -4,35 +4,39 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>实现响应式的表格 | 左，右</title>
+    <title>在移动端区分iPhone，Adroid | 左，右</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="He Gang">
     
 
     
-    <meta name="description" content="如何在移动端更好显示表格今天看到，看到“堆叠”的方式显示表格，瞬间感觉高大上，纯css实现。然后对他的实现方式研究了一下。
-当屏幕打到需要”堆叠”方式显示的时候，则更换样式。类似于sql中的行转列的效果。
-td中需要一个属性(这里是data-label)，记录列属性的值。
-&amp;lt;td data-label=&quot;Payment&quot;&amp;gt;Payment #1&amp;lt;/td&amp;gt;
-&amp;lt;td dat">
+    <meta name="description" content="在浏览器的移动端区分iPhone，Android业务需求:需要通过压面下载app，Android下载Android的app，iPhone则跳到AppStore。解决方案:通过浏览器的navigator对象，可以获取到设备，操作系统的一些相关的信息(包括系统版本号)。通过这些信息则可以做出判断。
+首先
+打印出navidator对象，分析一下。
+
+如下
+var s = navigator.userAg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实现响应式的表格">
-<meta property="og:url" content="http://blog.hegang.me/2015/07/11/实现响应式的表格/index.html">
+<meta property="og:title" content="在移动端区分iPhone，Adroid">
+<meta property="og:url" content="http://blog.hegang.me/2015/07/22/在移动端区分iPhone，Android/index.html">
 <meta property="og:site_name" content="左，右">
-<meta property="og:description" content="如何在移动端更好显示表格今天看到，看到“堆叠”的方式显示表格，瞬间感觉高大上，纯css实现。然后对他的实现方式研究了一下。
-当屏幕打到需要”堆叠”方式显示的时候，则更换样式。类似于sql中的行转列的效果。
-td中需要一个属性(这里是data-label)，记录列属性的值。
-&amp;lt;td data-label=&quot;Payment&quot;&amp;gt;Payment #1&amp;lt;/td&amp;gt;
-&amp;lt;td dat">
-<meta property="og:updated_time" content="2015-07-12T03:04:24.000Z">
+<meta property="og:description" content="在浏览器的移动端区分iPhone，Android业务需求:需要通过压面下载app，Android下载Android的app，iPhone则跳到AppStore。解决方案:通过浏览器的navigator对象，可以获取到设备，操作系统的一些相关的信息(包括系统版本号)。通过这些信息则可以做出判断。
+首先
+打印出navidator对象，分析一下。
+
+如下
+var s = navigator.userAg">
+<meta property="og:image" content="http://7xk6zw.com1.z0.glb.clouddn.com/浏览器的navigator对象">
+<meta property="og:updated_time" content="2015-07-22T12:57:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实现响应式的表格">
-<meta name="twitter:description" content="如何在移动端更好显示表格今天看到，看到“堆叠”的方式显示表格，瞬间感觉高大上，纯css实现。然后对他的实现方式研究了一下。
-当屏幕打到需要”堆叠”方式显示的时候，则更换样式。类似于sql中的行转列的效果。
-td中需要一个属性(这里是data-label)，记录列属性的值。
-&amp;lt;td data-label=&quot;Payment&quot;&amp;gt;Payment #1&amp;lt;/td&amp;gt;
-&amp;lt;td dat">
+<meta name="twitter:title" content="在移动端区分iPhone，Adroid">
+<meta name="twitter:description" content="在浏览器的移动端区分iPhone，Android业务需求:需要通过压面下载app，Android下载Android的app，iPhone则跳到AppStore。解决方案:通过浏览器的navigator对象，可以获取到设备，操作系统的一些相关的信息(包括系统版本号)。通过这些信息则可以做出判断。
+首先
+打印出navidator对象，分析一下。
+
+如下
+var s = navigator.userAg">
 
     
     
@@ -90,14 +94,14 @@ td中需要一个属性(这里是data-label)，记录列属性的值。
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/11/实现响应式的表格/" title="实现响应式的表格" itemprop="url">实现响应式的表格</a>
+      <a href="/2015/07/22/在移动端区分iPhone，Android/" title="在移动端区分iPhone，Adroid" itemprop="url">在移动端区分iPhone，Adroid</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="He Gang" target="_blank" itemprop="author">He Gang</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-11T06:18:30.000Z" itemprop="datePublished"> 发表于 2015-07-11</time>
+    <time datetime="2015-07-22T12:57:19.000Z" itemprop="datePublished"> 发表于 2015-07-22</time>
     
   </p>
 </header>
@@ -106,67 +110,29 @@ td中需要一个属性(这里是data-label)，记录列属性的值。
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何在移动端更好显示表格"><span class="toc-number">1.</span> <span class="toc-text">如何在移动端更好显示表格</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#在浏览器的移动端区分iPhone，Android"><span class="toc-number">1.</span> <span class="toc-text">在浏览器的移动端区分iPhone，Android</span></a></li></ol>
 		
 		</div>
 		
-		<h1 id="如何在移动端更好显示表格">如何在移动端更好显示表格</h1><p>今天看到，看到“堆叠”的方式显示表格，瞬间感觉高大上，纯css实现。然后对他的实现方式研究了一下。</p>
-<p><strong>当屏幕打到需要”堆叠”方式显示的时候，则更换样式。类似于sql中的行转列的效果。</strong></p>
-<p>td中需要一个属性(这里是<strong><em>data-label</em></strong>)，记录列属性的值。</p>
-<pre><code><span class="tag">&lt;<span class="title">td</span> <span class="attribute">data-label</span>=<span class="value">"Payment"</span>&gt;</span>Payment #1<span class="tag">&lt;/<span class="title">td</span>&gt;</span>
-<span class="tag">&lt;<span class="title">td</span> <span class="attribute">data-label</span>=<span class="value">"Issue Date"</span>&gt;</span>02/01/2015<span class="tag">&lt;/<span class="title">td</span>&gt;</span>
-<span class="tag">&lt;<span class="title">td</span> <span class="attribute">data-label</span>=<span class="value">"Amount"</span>&gt;</span>$2,311<span class="tag">&lt;/<span class="title">td</span>&gt;</span>
-<span class="tag">&lt;<span class="title">td</span> <span class="attribute">data-label</span>=<span class="value">"Period"</span>&gt;</span>01/01/2015 - 01/31/2015<span class="tag">&lt;/<span class="title">td</span>&gt;</span>
-</code></pre><p>css</p>
-<pre><code>@media screen and (max-width: 600px) {
-
-<span class="title">table {</span>
-  border: 0;
+		<h1 id="在浏览器的移动端区分iPhone，Android">在浏览器的移动端区分iPhone，Android</h1><p>业务需求:需要通过压面下载app，Android下载Android的app，iPhone则跳到AppStore。<br>解决方案:通过浏览器的navigator对象，可以获取到设备，操作系统的一些相关的信息(包括系统版本号)。通过这些信息则可以做出判断。</p>
+<p><strong>首先</strong></p>
+<p>打印出navidator对象，分析一下。</p>
+<p><img src="http://7xk6zw.com1.z0.glb.clouddn.com/浏览器的navigator对象" alt="navigator浏览器对象"></p>
+<p><strong><em>如下</em></strong></p>
+<pre><code>var s = navigator.userAgent;
+<span class="keyword">if</span><span class="params">(s.indexOf<span class="params">(<span class="string">"Android"</span>)</span>&gt;<span class="number">0</span>)</span>{
+ <span class="comment">//Android;</span>
 }
-/*隐藏 thead*/
-<span class="title">table thead {</span>
-  display: none;
+<span class="keyword">else</span> <span class="keyword">if</span><span class="params">(s.indexOf<span class="params">(<span class="string">"iPhone"</span>)</span>&gt;<span class="number">0</span>)</span>{
+ <span class="comment">//iPhone;</span>
 }
-
-<span class="title">table tr {</span>
-  margin-bottom: 10px;
-  display: block;
-  border-bottom: 2px solid #ddd;
-}
-
-<span class="title">table td {</span>
-/*改变td的显示方式，为block，则前后会有换行效果*/
-  display: block;
-  text-align: right;
-  font-size: 13px;
-  border-bottom: 1px dotted #ccc;
-}
-
-<span class="title">table td:last-child {</span>
-  border-bottom: 0;
-}
-/*在td前显示原本列名*/
-<span class="title">table td:before {</span>
-  /*访问，td的data-label的属性*/
-  content: attr(data-label);
-  float: left;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-}
-</code></pre><p>效果预览，手机电脑分别访问效果更明显（<a href="http://sandbox.runjs.cn/show/4xrfqbz1" target="_blank" rel="external">点击这里</a>）</p>
-<p>源码(<a href="http://codepen.io/anon/pen/QwPVNW" target="_blank" rel="external">点我，点我</a>)</p>
-<p>更精彩(<a href="https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/" target="_blank" rel="external">点我，点我</a>)</p>
+</code></pre><p><strong><em>实测</em></strong></p>
+<p><a href="http://sandbox.runjs.cn/show/axfldnow" target="_blank" rel="external">点击这里</a>hexo</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/移动端/">移动端</a>
-  </div>
 
 </div>
 
@@ -174,7 +140,7 @@ td中需要一个属性(这里是data-label)，记录列属性的值。
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://blog.hegang.me/2015/07/11/实现响应式的表格/" data-title="实现响应式的表格 | 左，右" data-tsina="null" class="share clearfix">
+	  <div data-url="http://blog.hegang.me/2015/07/22/在移动端区分iPhone，Android/" data-title="在移动端区分iPhone，Adroid | 左，右" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -187,19 +153,11 @@ td中需要一个属性(这里是data-label)，记录列属性的值。
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/07/22/在移动端区分iPhone，Android/" title="在移动端区分iPhone，Adroid">
-  <strong>上一篇：</strong><br/>
-  <span>
-  在移动端区分iPhone，Adroid</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/07/08/第一篇博客/"  title="第一篇博客">
+<a href="/2015/07/11/实现响应式的表格/"  title="实现响应式的表格">
  <strong>下一篇：</strong><br/> 
- <span>第一篇博客
+ <span>实现响应式的表格
 </span>
 </a>
 </div>
@@ -208,7 +166,7 @@ td中需要一个属性(这里是data-label)，记录列属性的值。
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/07/11/实现响应式的表格/" data-title="实现响应式的表格" data-url="http://blog.hegang.me/2015/07/11/实现响应式的表格/"></div>
+	<div class="ds-thread" data-thread-key="2015/07/22/在移动端区分iPhone，Android/" data-title="在移动端区分iPhone，Adroid" data-url="http://blog.hegang.me/2015/07/22/在移动端区分iPhone，Android/"></div>
 </section>
 
 
@@ -218,7 +176,7 @@ td中需要一个属性(这里是data-label)，记录列属性的值。
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何在移动端更好显示表格"><span class="toc-number">1.</span> <span class="toc-text">如何在移动端更好显示表格</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#在浏览器的移动端区分iPhone，Android"><span class="toc-number">1.</span> <span class="toc-text">在浏览器的移动端区分iPhone，Android</span></a></li></ol>
  
   </div>
 
