@@ -1544,7 +1544,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ba7166;
+  background: #ab9644;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2123,4 +2123,8 @@ body {
 /*footer {*/
 /*display none;*/
 /*}*/
+}
+.site-nav {
+  background-color: #537a82;
+  border: 0px;
 }
