@@ -1544,7 +1544,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #66b086;
+  background: #ff78ac;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2073,6 +2073,9 @@ pre .javascript .function {
     top: 0 !important;
   }
 }
+body {
+  background-color: #f5f7f9;
+}
 .main-inner {
   width: 100%;
   max-width: 760px;
@@ -2084,4 +2087,46 @@ pre .javascript .function {
 .footer-inner {
   width: 100%;
   max-width: 760px;
+}
+.header {
+  background-color: #547a82;
+/* background-image: linear-gradient(135deg, rgba(30, 33, 33, 0.811765) 1%, rgba(32, 32, 32, 0.0901961) 98%),
+   url("http://7xk6zw.com1.z0.glb.clouddn.com/1.jpg");
+   background-size: auto, cover;
+   margin-top: 1px;
+   background-position: 0px 0px, 50% 50%;*/
+}
+.header .menu a {
+  color: #fff;
+}
+.header .site-subtitle {
+  color: #fff;
+}
+.footer {
+  color: #fff;
+  background-color: #537a82;
+}
+.page-home .content .posts-expand {
+  padding-top: 20px;
+}
+.page-home .content .posts-expand article {
+  padding: 10px 10px 10px 10px;
+  box-shadow: rgba(0,0,0,0.16) 0px 0px 7px 2px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.page-home .content .posts-expand article footer {
+  display: none;
+}
+.page-post-detail .content .posts-expand {
+  padding-top: 20px;
+}
+.page-post-detail .content .posts-expand article {
+  padding: 10px 10px 10px 10px;
+  box-shadow: rgba(0,0,0,0.16) 0px 0px 7px 2px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.page-post-detail .content .posts-expand article footer {
+  display: none;
 }
