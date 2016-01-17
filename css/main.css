@@ -1544,7 +1544,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ab9644;
+  background: #ffc9d6;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2084,6 +2084,17 @@ body {
   width: 100%;
   max-width: 760px;
 }
+.header-inner .site-nav {
+  padding: 0 0px;
+  background-color: #537a82;
+  border: 0px;
+}
+.header-inner .site-nav .menu {
+  padding-left: 20px;
+}
+.header-inner .site-nav-toggle .btn-bar {
+  background-color: #111;
+}
 .footer-inner {
   width: 100%;
   max-width: 760px;
@@ -2123,8 +2134,4 @@ body {
 /*footer {*/
 /*display none;*/
 /*}*/
-}
-.site-nav {
-  background-color: #537a82;
-  border: 0px;
 }
