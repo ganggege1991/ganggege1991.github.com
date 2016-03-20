@@ -93,7 +93,7 @@ public Class Person{
 <meta property="og:image" content="http://7xk6zw.com1.z0.glb.clouddn.com/%E8%87%AA%E5%85%B3%E8%81%94.png">
 <meta property="og:image" content="http://7xk6zw.com1.z0.glb.clouddn.com/%E8%81%9A%E5%90%881.png">
 <meta property="og:image" content="http://7xk6zw.com1.z0.glb.clouddn.com/%E7%BB%84%E5%90%881.png">
-<meta property="og:updated_time" content="2016-03-20T15:05:52.000Z">
+<meta property="og:updated_time" content="2016-03-20T15:07:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UML学习笔记（类图）">
 <meta name="twitter:description" content="UML 类图学习学习类图
@@ -395,9 +395,9 @@ public Class Person{
 <ul>
 <li><p>聚合</p>
 <p>  聚合(Aggregation)关系表示整体与部分的关系。<strong>在聚合关系中，成员对象是整体对象的一部分，但是成员对象可以脱离整体对象独立存在。</strong>    </p>
-<p>  <strong>在代码实现聚合关系时，成员对象通常作为构造方法、Setter方法或业务方法的参数注入到整体对象中</strong></p>
 <p>  <strong>在UML中，聚合关系用带</strong>空心菱形的直线**表示。</p>
 <p>  <img src="http://7xk6zw.com1.z0.glb.clouddn.com/%E8%81%9A%E5%90%881.png" alt="聚合"></p>
+<p>  <strong>在代码实现聚合关系时，成员对象通常作为构造方法、Setter方法或业务方法的参数注入到整体对象中</strong></p>
 </li>
 </ul>
 <pre><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Car</span> {  
@@ -423,23 +423,21 @@ public Class Person{
 <p>  组合(Composition)关系也表示类之间整体和部分的关系，<strong>但是在组合关系中整体对象可以控制成员对象的生命周期，一旦整体对象不存在，成员对象也将不存在，成员对象与整体对象之间具有同生共死的关系。</strong></p>
 <p>  <strong>在UML中，组合关系用带实心菱形的直线表示。</strong></p>
 <p>  <img src="http://7xk6zw.com1.z0.glb.clouddn.com/%E7%BB%84%E5%90%881.png" alt="聚合"></p>
+<p>  <strong>在整体类的构造方法中直接实例化成员类</strong></p>
 </li>
 </ul>
-<pre><code>**在整体类的构造方法中直接实例化成员类**
+<pre><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Head</span> {  
+    <span class="keyword">private</span> Mouth mouth;  
 
-
-    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Head</span> {  
-        <span class="keyword">private</span> Mouth mouth;  
-
-        <span class="function"><span class="keyword">public</span> <span class="title">Head</span>(<span class="params"></span>) </span>{  
-            mouth = <span class="keyword">new</span> Mouth(); <span class="comment">//实例化成员类  </span>
-        }  
-        ……      
+    <span class="function"><span class="keyword">public</span> <span class="title">Head</span>(<span class="params"></span>) </span>{  
+        mouth = <span class="keyword">new</span> Mouth(); <span class="comment">//实例化成员类  </span>
     }  
+    ……      
+}  
 
-    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Mouth</span> {  
-        ……  
-    } 
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Mouth</span> {  
+    ……  
+} 
 </code></pre><h2 id="学习博客"><a href="http://blog.csdn.net/lovelion" target="_blank" rel="external">学习博客</a></h2>
       
     </div>
