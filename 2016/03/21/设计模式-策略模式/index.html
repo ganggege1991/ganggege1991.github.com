@@ -80,7 +80,7 @@ ContcreteStrategy 具体实现。
 类图（以简单的加减运算为例）
 代码实现/**">
 <meta property="og:image" content="http://7xk6zw.com1.z0.glb.clouddn.com/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9B%BE.png">
-<meta property="og:updated_time" content="2016-03-21T15:43:06.000Z">
+<meta property="og:updated_time" content="2016-03-23T14:09:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-策略模式">
 <meta name="twitter:description" content="策略模式(Strategy Pattern)定义
@@ -428,7 +428,7 @@ ContcreteStrategy 具体实现。
 </code></pre><h2 id="与工厂模式结合，弥补其缺点">与工厂模式结合，弥补其缺点</h2><pre><code><span class="keyword">public</span> <span class="keyword">enum</span> StrategyMan{
     Add(<span class="string">"strategy.Add"</span>),Sub(<span class="string">"strategy.Sub"</span>);
     String symbol = <span class="string">""</span>;
-    <span class="function"><span class="keyword">public</span> <span class="title">StrategyMan</span>(<span class="params">String symbol</span>)</span>{
+    <span class="function"><span class="keyword">private</span> <span class="title">StrategyMan</span>(<span class="params">String symbol</span>)</span>{
         <span class="keyword">this</span>.symbol = symbol;
     }
     <span class="function"><span class="keyword">public</span> String <span class="title">getSymbol</span>(<span class="params"></span>)</span>{
@@ -436,13 +436,13 @@ ContcreteStrategy 具体实现。
     }
 }
 
-<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">StrategyFacotry</span>{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ICalculator <span class="title">getCalculator</span>(<span class="params">StrategyMan strategy</span>)</span>{
-        ICalculator calculator = <span class="keyword">null</span>;
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">StrategyFactory</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Calculator <span class="title">getCalculator</span>(<span class="params">StrategyMan strategy</span>)</span>{
+        Calculator calculator = <span class="keyword">null</span>;
         <span class="keyword">try</span>{
-            calculator = (ICalculator)Class.forName(strategt.getValue()).newInstance();
+            calculator = (Calculator)Class.forName(strategy.getSymbol()).newInstance();
         }<span class="keyword">catch</span>(Exception e){
-
+            <span class="comment">//<span class="doctag">TODO</span></span>
         }
         <span class="keyword">return</span> calculator;
     }
