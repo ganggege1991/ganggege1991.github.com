@@ -39,7 +39,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="勇士," />
+  <meta name="keywords" content="观察者模式,设计模式," />
 
 
 
@@ -55,26 +55,47 @@
 
 
 
-<meta name="description" content="勇士今天是星期天，一大早起床，出门买了两个包子当早餐，然后坐等今天的的大戏。果然，这戏太足，太大。至此，对勇士转粉。
-巨星对飙库里，杜兰特的对飙实在是，太特么屌了。这个时代得分能力最强，最具观赏性的两位球员。
-王者归来库里崴脚，相信不只勇士被吓坏了，联盟，乃至更多的球迷，都被吓坏了。王者归来，用完美的表现，结束了这场比赛。
-加时常规时间最后时刻，只能说科尔就是牛，快两分，紧逼迫使对方失误(还好伊戈">
+<meta name="description" content="观察者模式(Observer)定义定义了对象一对多依赖，这样一来当一个对象改变时，他的所有依赖者都会收到通知，并自动更新。
+认识观察者模式“考订阅报纸”思维
+
+报社就是出版报纸。
+只要向在报社订阅了报纸，有新的报纸就会通知订阅者。
+订阅者可以取消订阅。取消之后就不再收到新的报纸。
+只要报社还在运营就一定有订阅者取消，订阅报纸。
+
+“角色”
+Subject 主题，出版者
+Observer 观察者，订">
 <meta property="og:type" content="article">
-<meta property="og:title" content="又多了一只喜欢的球队">
-<meta property="og:url" content="http://blog.hegang.me/2016/02/28/又多了一只喜欢的球队/index.html">
+<meta property="og:title" content="设计模式-观察者模式">
+<meta property="og:url" content="http://blog.hegang.me/2016/03/24/设计模式-观察者模式/index.html">
 <meta property="og:site_name" content="待·定">
-<meta property="og:description" content="勇士今天是星期天，一大早起床，出门买了两个包子当早餐，然后坐等今天的的大戏。果然，这戏太足，太大。至此，对勇士转粉。
-巨星对飙库里，杜兰特的对飙实在是，太特么屌了。这个时代得分能力最强，最具观赏性的两位球员。
-王者归来库里崴脚，相信不只勇士被吓坏了，联盟，乃至更多的球迷，都被吓坏了。王者归来，用完美的表现，结束了这场比赛。
-加时常规时间最后时刻，只能说科尔就是牛，快两分，紧逼迫使对方失误(还好伊戈">
-<meta property="og:image" content="http://7xk6zw.com1.z0.glb.clouddn.com/FB_IMG_1456670385166.jpg">
-<meta property="og:updated_time" content="2016-02-28T15:57:26.000Z">
+<meta property="og:description" content="观察者模式(Observer)定义定义了对象一对多依赖，这样一来当一个对象改变时，他的所有依赖者都会收到通知，并自动更新。
+认识观察者模式“考订阅报纸”思维
+
+报社就是出版报纸。
+只要向在报社订阅了报纸，有新的报纸就会通知订阅者。
+订阅者可以取消订阅。取消之后就不再收到新的报纸。
+只要报社还在运营就一定有订阅者取消，订阅报纸。
+
+“角色”
+Subject 主题，出版者
+Observer 观察者，订">
+<meta property="og:image" content="http://7xk6zw.com1.z0.glb.clouddn.com/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F.png">
+<meta property="og:updated_time" content="2016-03-24T13:31:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="又多了一只喜欢的球队">
-<meta name="twitter:description" content="勇士今天是星期天，一大早起床，出门买了两个包子当早餐，然后坐等今天的的大戏。果然，这戏太足，太大。至此，对勇士转粉。
-巨星对飙库里，杜兰特的对飙实在是，太特么屌了。这个时代得分能力最强，最具观赏性的两位球员。
-王者归来库里崴脚，相信不只勇士被吓坏了，联盟，乃至更多的球迷，都被吓坏了。王者归来，用完美的表现，结束了这场比赛。
-加时常规时间最后时刻，只能说科尔就是牛，快两分，紧逼迫使对方失误(还好伊戈">
+<meta name="twitter:title" content="设计模式-观察者模式">
+<meta name="twitter:description" content="观察者模式(Observer)定义定义了对象一对多依赖，这样一来当一个对象改变时，他的所有依赖者都会收到通知，并自动更新。
+认识观察者模式“考订阅报纸”思维
+
+报社就是出版报纸。
+只要向在报社订阅了报纸，有新的报纸就会通知订阅者。
+订阅者可以取消订阅。取消之后就不再收到新的报纸。
+只要报社还在运营就一定有订阅者取消，订阅报纸。
+
+“角色”
+Subject 主题，出版者
+Observer 观察者，订">
 
 
 
@@ -92,7 +113,7 @@
   };
 </script>
 
-  <title> 又多了一只喜欢的球队 | 待·定 </title>
+  <title> 设计模式-观察者模式 | 待·定 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -242,7 +263,7 @@
             
             
               
-                又多了一只喜欢的球队
+                设计模式-观察者模式
               
             
           </h1>
@@ -254,8 +275,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-28T22:52:12+08:00" content="2016-02-28">
-              2016-02-28
+            <time itemprop="dateCreated" datetime="2016-03-24T21:30:29+08:00" content="2016-03-24">
+              2016-03-24
             </time>
           </span>
 
@@ -268,8 +289,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/篮球/" itemprop="url" rel="index">
-                    <span itemprop="name">篮球</span>
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
                   </a>
                 </span>
 
@@ -284,8 +305,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/28/又多了一只喜欢的球队/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/28/又多了一只喜欢的球队/" itemprop="commentsCount"></span>
+                <a href="/2016/03/24/设计模式-观察者模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/设计模式-观察者模式/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,13 +327,135 @@
       
 
       
-        <p><img src="http://7xk6zw.com1.z0.glb.clouddn.com/FB_IMG_1456670385166.jpg" alt="image"></p>
-<h3 id="勇士">勇士</h3><p>今天是星期天，一大早起床，出门买了两个包子当早餐，然后坐等今天的的大戏。果然，这戏太足，太大。至此，对勇士转粉。</p>
-<h4 id="巨星对飙">巨星对飙</h4><p>库里，杜兰特的对飙实在是，太特么屌了。这个时代得分能力最强，最具观赏性的两位球员。</p>
-<h4 id="王者归来">王者归来</h4><p>库里崴脚，相信不只勇士被吓坏了，联盟，乃至更多的球迷，都被吓坏了。王者归来，用完美的表现，结束了这场比赛。</p>
-<h4 id="加时">加时</h4><p>常规时间最后时刻，只能说科尔就是牛，快两分，紧逼迫使对方失误(还好伊戈达拉心脏够大)，打平，进加时。</p>
-<h4 id="破记录">破记录</h4><p>库里的三分，当然还有其他，这个最显眼。</p>
-<h4 id="绝杀">绝杀</h4><p>那个绝杀，啊~~~苍天啦</p>
+        <h1 id="观察者模式(Observer)">观察者模式(Observer)</h1><h2 id="定义">定义</h2><p>定义了对象一对多依赖，这样一来当一个对象改变时，他的所有依赖者都会收到通知，并自动更新。</p>
+<h2 id="认识观察者模式">认识观察者模式</h2><p>“考订阅报纸”思维</p>
+<ul>
+<li>报社就是出版报纸。</li>
+<li>只要向在报社订阅了报纸，有新的报纸就会通知订阅者。</li>
+<li>订阅者可以取消订阅。取消之后就不再收到新的报纸。</li>
+<li>只要报社还在运营就一定有订阅者取消，订阅报纸。</li>
+</ul>
+<h2 id="“角色”">“角色”</h2><ul>
+<li>Subject 主题，出版者</li>
+<li>Observer 观察者，订阅者</li>
+</ul>
+<h2 id="类图">类图</h2><p><img src="http://7xk6zw.com1.z0.glb.clouddn.com/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F.png" alt="观察者模式"></p>
+<h2 id="代码实现">代码实现</h2><pre><code><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Observer_Pattern</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
+        ConcreteObserverable concreteObserverable = <span class="keyword">new</span> ConcreteObserverable();
+        ConcreteObserver concreteObserver = <span class="keyword">new</span> ConcreteObserver(concreteObserverable);
+        concreteObserverable.setData(<span class="string">"Go~~~~~~"</span>);
+    }
+}
+
+
+<span class="class"><span class="keyword">interface</span> <span class="title">Observerable</span></span>{
+    <span class="function"><span class="keyword">void</span> <span class="title">addObserver</span><span class="params">(Observer observer)</span></span>;
+    <span class="function"><span class="keyword">void</span> <span class="title">delObserver</span><span class="params">(Observer observer)</span></span>;
+    <span class="function"><span class="keyword">void</span> <span class="title">notifyObserver</span><span class="params">(Observer observer)</span></span>;
+    <span class="function"><span class="keyword">void</span> <span class="title">notyfyObservers</span><span class="params">()</span></span>;
+}
+
+<span class="class"><span class="keyword">interface</span> <span class="title">Observer</span></span>{
+    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(Observerable observerable,String data)</span></span>;
+}
+
+<span class="class"><span class="keyword">class</span> <span class="title">ConcreteObserverable</span> <span class="keyword">implements</span> <span class="title">Observerable</span></span>{
+    <span class="keyword">private</span> List&lt;Observer&gt; observers;
+    <span class="keyword">private</span> String data;
+    <span class="keyword">private</span> <span class="keyword">boolean</span> isNotify;
+    <span class="function"><span class="keyword">public</span> <span class="title">ConcreteObserverable</span><span class="params">()</span> </span>{
+        observers = <span class="keyword">new</span> ArrayList&lt;&gt;();
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addObserver</span><span class="params">(Observer observer)</span> </span>{
+        observers.add(observer);
+
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delObserver</span><span class="params">(Observer observer)</span> </span>{
+        observers.remove(observer);
+
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">notifyObserver</span><span class="params">(Observer observer)</span> </span>{
+        <span class="keyword">if</span>(isNotify){
+            observer.update(<span class="keyword">this</span>,data);
+        }
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">notyfyObservers</span><span class="params">()</span> </span>{
+        <span class="keyword">for</span> (Observer observer : observers) {
+            observer.update(<span class="keyword">this</span>, data);
+        }
+    }
+
+    <span class="function"><span class="keyword">public</span> List&lt;Observer&gt; <span class="title">getObservers</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> observers;
+    }
+
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setObservers</span><span class="params">(List&lt;Observer&gt; observers)</span> </span>{
+        <span class="keyword">this</span>.observers = observers;
+    }
+
+    <span class="function"><span class="keyword">public</span> String <span class="title">getData</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> data;
+    }
+
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setData</span><span class="params">(String data)</span> </span>{
+        <span class="keyword">this</span>.data = data;
+        dataChange();
+    }
+    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dataChange</span><span class="params">()</span></span>{
+        <span class="keyword">this</span>.isNotify = <span class="keyword">true</span>;<span class="comment">//这里可以根据条件判断，是否需要提示观察者</span>
+        notyfyObservers();
+    }
+
+
+}
+
+<span class="class"><span class="keyword">class</span> <span class="title">ConcreteObserver</span> <span class="keyword">implements</span> <span class="title">Observer</span></span>{
+
+    <span class="keyword">private</span> Observerable observerable;
+    <span class="keyword">private</span> String data;
+
+    <span class="function"><span class="keyword">public</span> <span class="title">ConcreteObserver</span><span class="params">(Observerable observerable)</span> </span>{
+        <span class="keyword">this</span>.observerable = observerable;
+        observerable.addObserver(<span class="keyword">this</span>);
+    }
+    <span class="annotation">@Override</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(Observerable observerable, String data)</span> </span>{
+        <span class="keyword">this</span>.observerable = observerable;
+        <span class="keyword">this</span>.data = data;
+        System.out.println(data);
+    }
+    <span class="function"><span class="keyword">public</span> Observerable <span class="title">getObserverable</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> observerable;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setObserverable</span><span class="params">(Observerable observerable)</span> </span>{
+        <span class="keyword">this</span>.observerable = observerable;
+    }
+    <span class="function"><span class="keyword">public</span> String <span class="title">getData</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> data;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setData</span><span class="params">(String data)</span> </span>{
+        <span class="keyword">this</span>.data = data;
+    }
+
+}
+</code></pre><h2 id="==注意事项==">==注意事项==</h2><ul>
+<li><p>避免广播链的问题</p>
+<p>A观察着B，B观察着C….</p>
+</li>
+<li><p>异步处理</p>
+<p>一个被观察这可能有多个观察者。同时，处理时间比较长。需要考虑异步。异步要考虑，线程安全和队列问题，书上说，看MQ，(⊙o⊙)…还没有看过。。。看了再说。当然这不是这里的重点。</p>
+</li>
+</ul>
+<p>学习书籍，<strong>Head First 设计模式</strong>、<strong>设计模式之禅</strong></p>
 
       
     </div>
@@ -321,7 +464,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/勇士/" rel="tag">#勇士</a>
+            <a href="/tags/观察者模式/" rel="tag">#观察者模式</a>
+          
+            <a href="/tags/设计模式/" rel="tag">#设计模式</a>
           
         </div>
       
@@ -330,17 +475,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/17/第一篇博客/" rel="next" title="第一篇博客">
-                <i class="fa fa-chevron-left"></i> 第一篇博客
+              <a href="/2016/03/21/设计模式-策略模式/" rel="next" title="设计模式-策略模式">
+                <i class="fa fa-chevron-left"></i> 设计模式-策略模式
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/19/UML学习笔记(类图)/" rel="prev" title="UML学习笔记（类图）">
-                UML学习笔记（类图） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -389,8 +530,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/28/又多了一只喜欢的球队/"
-           data-title="又多了一只喜欢的球队" data-url="http://blog.hegang.me/2016/02/28/又多了一只喜欢的球队/">
+      <div class="ds-thread" data-thread-key="2016/03/24/设计模式-观察者模式/"
+           data-title="设计模式-观察者模式" data-url="http://blog.hegang.me/2016/03/24/设计模式-观察者模式/">
       </div>
     
   </div>
@@ -481,7 +622,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#勇士"><span class="nav-number">1.</span> <span class="nav-text">勇士</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#巨星对飙"><span class="nav-number">1.1.</span> <span class="nav-text">巨星对飙</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#王者归来"><span class="nav-number">1.2.</span> <span class="nav-text">王者归来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加时"><span class="nav-number">1.3.</span> <span class="nav-text">加时</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#破记录"><span class="nav-number">1.4.</span> <span class="nav-text">破记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绝杀"><span class="nav-number">1.5.</span> <span class="nav-text">绝杀</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#观察者模式(Observer)"><span class="nav-number">1.</span> <span class="nav-text">观察者模式(Observer)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#认识观察者模式"><span class="nav-number">1.2.</span> <span class="nav-text">认识观察者模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“角色”"><span class="nav-number">1.3.</span> <span class="nav-text">“角色”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类图"><span class="nav-number">1.4.</span> <span class="nav-text">类图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">1.5.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#==注意事项=="><span class="nav-number">1.6.</span> <span class="nav-text">==注意事项==</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
