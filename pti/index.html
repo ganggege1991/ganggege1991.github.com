@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTI - PDF to Image Converter</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --accent-color: #1d4ed8;
+            --bg-color: #f8fafc;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/pattern.svg') center/cover;
+            opacity: 0.1;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 16px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.25em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1200px) {
+            .features {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                padding: 5px;
+            }
+        }
+
+        .feature {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            display: inline-flex;
+            align-items: center;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            font-size: 1.25em;
+            color: var(--primary-color);
+            display: inline-flex;
+            align-items: center;
+            height: 40px;
+        }
+
+        .feature p {
+            font-size: 1em;
+            line-height: 1.5;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .screenshots {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .screenshot {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot:hover {
+            transform: translateY(-5px);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot.main {
+            grid-column: 1 / -1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+            margin-top: 30px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta.secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .cta:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            margin-top: 60px;
+        }
+
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="./" class="navbar-brand">
+            <img src="logo/app_icon_1024.png" alt="PTI Logo" class="navbar-logo">
+            <span class="navbar-title">PTI</span>
+        </a>
+    </div>
+</nav>
+
+<div class="language-switcher">
+    <a href="?lang=en" data-lang="en">English</a>
+    <a href="?lang=zh" data-lang="zh">中文</a>
+    <a href="?lang=ja" data-lang="ja">日本語</a>
+</div>
+
+<header class="header">
+    <div class="container">
+        <img src="logo/app_icon_1024.png" alt="PTI Logo" class="logo">
+        <h1 class="title">PTI</h1>
+        <p class="subtitle">Simple, Fast, Secure PDF to Image Converter</p>
+        <div> 
+            <a href="guide.html" class="cta" id="guideLink">User Guide</a>
+        </div>
+    </div>
+</header>
+
+<section class="features">
+    <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>Secure & Offline</h3>
+        <p>All processing is done locally on your device. No data is ever uploaded to any server.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">⚡️</div>
+        <h3>Fast & Efficient</h3>
+        <p>Convert PDFs to high-quality images quickly with optimized performance.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">🎨</div>
+        <h3>Quality Control</h3>
+        <p>Choose from multiple quality settings to balance between image quality and file size.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="privacy-policy/index.html" id="privacyLink">Privacy Policy</a>
+            <a href="mailto:hggxgang@163.com">Contact</a>
+        </div>
+        <p>&copy; 2024 PTI. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script>
+    const translations = {
+        en: {
+            title: 'PTI',
+            subtitle: 'Simple, Fast, Secure PDF to Image Converter',
+            userGuide: 'User Guide',
+            feature1Title: 'Secure & Offline',
+            feature1Desc: 'All processing is done locally on your device. No data is ever uploaded to any server.',
+            feature2Title: 'Fast & Efficient',
+            feature2Desc: 'Convert PDFs to high-quality images quickly with optimized performance.',
+            feature3Title: 'Quality Control',
+            feature3Desc: 'Choose from multiple quality settings to balance between image quality and file size.',
+            privacyPolicy: 'Privacy Policy',
+            contact: 'Contact',
+            copyright: '© 2024 PTI. All rights reserved.'
+        },
+        zh: {
+            title: 'PTI',
+            subtitle: '简单、快速、安全的 PDF 转图片工具',
+            userGuide: '使用指南',
+            feature1Title: '安全离线',
+            feature1Desc: '所有处理在本地完成，数据永不上传服务器。',
+            feature2Title: '快速高效',
+            feature2Desc: '快速将 PDF 转换为高质量图片，性能优化。',
+            feature3Title: '质量控制',
+            feature3Desc: '多种质量设置可选，平衡图片质量和文件大小。',
+            privacyPolicy: '隐私政策',
+            contact: '联系我们',
+            copyright: '© 2024 PTI. 保留所有权利。'
+        },
+        ja: {
+            title: 'PTI',
+            subtitle: 'シンプル、高速、安全な PDF から画像への変換ツール',
+            userGuide: 'ユーザーガイド',
+            feature1Title: '安全なオフライン処理',
+            feature1Desc: 'すべての処理はローカルで行われ、データがサーバーにアップロードされることはありません。',
+            feature2Title: '高速で効率的',
+            feature2Desc: 'PDFを高品質な画像に素早く変換、最適化されたパフォーマンス。',
+            feature3Title: '品質コントロール',
+            feature3Desc: '画質とファイルサイズのバランスを取る複数の品質設定。',
+            privacyPolicy: 'プライバシーポリシー',
+            contact: 'お問い合わせ',
+            copyright: '© 2024 PTI. All rights reserved.'
+        }
+    };
+
+    function getLanguageFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('lang') || 'en';
+    }
+
+    function getCurrentPath() {
+        const path = window.location.pathname;
+        return path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+    }
+
+    function updateLanguageButtons(currentLang) {
+        const buttons = document.querySelectorAll('.language-switcher a');
+        const currentPath = getCurrentPath();
+
+        buttons.forEach(button => {
+            const lang = button.getAttribute('data-lang');
+            button.classList.toggle('active', lang === currentLang);
+            button.href = `${currentPath}?lang=${lang}`;
+        });
+    }
+
+    function updateContent(lang) {
+        const content = translations[lang];
+        if (!content) return;
+
+        document.title = `PTI - ${content.subtitle}`;
+        document.querySelector('.title').textContent = content.title;
+        document.querySelector('.subtitle').textContent = content.subtitle;
+        document.querySelector('.cta').textContent = content.userGuide;
+
+        const features = document.querySelectorAll('.feature');
+        features[0].querySelector('h3').textContent = content.feature1Title;
+        features[0].querySelector('p').textContent = content.feature1Desc;
+        features[1].querySelector('h3').textContent = content.feature2Title;
+        features[1].querySelector('p').textContent = content.feature2Desc;
+        features[2].querySelector('h3').textContent = content.feature3Title;
+        features[2].querySelector('p').textContent = content.feature3Desc;
+
+        document.querySelector('.footer-links a:first-child').textContent = content.privacyPolicy;
+        document.querySelector('.footer-links a:last-child').textContent = content.contact;
+        document.querySelector('footer p').textContent = content.copyright;
+
+        updateLanguageButtons(lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const lang = getLanguageFromURL();
+        const guideLink = document.getElementById('guideLink');
+        const privacyLink = document.getElementById('privacyLink');
+
+        if (guideLink) {
+            const baseHref = guideLink.getAttribute('href').split('?')[0];
+            guideLink.href = `${baseHref}?lang=${lang}`;
+        }
+
+        if (privacyLink) {
+            const baseHref = privacyLink.getAttribute('href').split('?')[0];
+            privacyLink.href = `${baseHref}?lang=${lang}`;
+        }
+
+        updateContent(lang);
+    });
+</script>
+</body>
+</html> 

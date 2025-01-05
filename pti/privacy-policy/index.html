@@ -1,1 +1,314 @@
- 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTI - Privacy Policy</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .privacy-section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .privacy-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .privacy-section h3 {
+            margin: 20px 0 10px;
+            font-size: 1.2em;
+            color: var(--primary-color);
+        }
+
+        .privacy-section p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .privacy-section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .privacy-section li {
+            margin: 5px 0;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .page-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .page-subtitle {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../" class="navbar-brand">
+                <img src="../logo/app_icon_1024.png" alt="PTI Logo" class="navbar-logo">
+                <span class="navbar-title">PTI</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="language-switcher">
+        <a href="?lang=en" data-lang="en">English</a>
+        <a href="?lang=zh" data-lang="zh">中文</a>
+        <a href="?lang=ja" data-lang="ja">日本語</a>
+    </div>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Privacy Policy</h1>
+            <p class="page-subtitle">How we protect your privacy</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="privacy-section">
+            <h2>Overview</h2>
+            <p>PTI is committed to protecting your privacy. This Privacy Policy explains how we handle your data when you use our application.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Data Collection</h2>
+            <h3>Local Processing</h3>
+            <p>PTI processes all PDF files locally on your device. We do not collect, store, or transmit any of your files or personal information to any servers.</p>
+            
+            <h3>No Personal Information</h3>
+            <p>We do not collect any personal information, including but not limited to:</p>
+            <ul>
+                <li>Names or contact information</li>
+                <li>Device information</li>
+                <li>Usage statistics</li>
+                <li>PDF files or converted images</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Data Security</h2>
+            <p>Since all processing is done locally on your device:</p>
+            <ul>
+                <li>Your files never leave your device</li>
+                <li>No data is stored on external servers</li>
+                <li>No internet connection is required for the core functionality</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about our privacy policy, please contact us at:</p>
+            <p><a href="mailto:hggxgang@163.com">hggxgang@163.com</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../guide.html" id="guideLink">User Guide</a>
+                <a href="mailto:hggxgang@163.com">Contact</a>
+            </div>
+            <p>&copy; 2024 PTI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script>
+        const translations = {
+            en: {
+                title: 'Privacy Policy',
+                subtitle: 'How we protect your privacy',
+                overview: {
+                    title: 'Overview',
+                    desc: 'PTI is committed to protecting your privacy. This Privacy Policy explains how we handle your data when you use our application.'
+                },
+                dataCollection: {
+                    title: 'Data Collection',
+                    local: {
+                        title: 'Local Processing',
+                        desc: 'PTI processes all PDF files locally on your device. We do not collect, store, or transmit any of your files or personal information to any servers.'
+                    },
+                    noPersonal: {
+                        title: 'No Personal Information',
+                        desc: 'We do not collect any personal information, including but not limited to:',
+                        items: [
+                            'Names or contact information',
+                            'Device information',
+                            'Usage statistics',
+                            'PDF files or converted images'
+                        ]
+                    }
+                },
+                security: {
+                    title: 'Data Security',
+                    desc: 'Since all processing is done locally on your device:',
+                    items: [
+                        'Your files never leave your device',
+                        'No data is stored on external servers',
+                        'No internet connection is required for the core functionality'
+                    ]
+                },
+                contact: {
+                    title: 'Contact Us',
+                    desc: 'If you have any questions about our privacy policy, please contact us at:'
+                },
+                userGuide: 'User Guide',
+                contactLink: 'Contact',
+                copyright: '© 2024 PTI. All rights reserved.'
+            },
+            zh: {
+                title: '隐私政策',
+                subtitle: '我们如何保护您的隐私',
+                overview: {
+                    title: '概述',
+                    desc: 'PTI 致力于保护您的隐私。本隐私政策说明了我们如何处理您在使用应用程序时的数据。'
+                },
+                dataCollection: {
+                    title: '数据收集',
+                    local: {
+                        title: '本地处理',
+                        desc: 'PTI 在您的设备上本地处理所有 PDF 文件。我们不会收集、存储或传输您的任何文件或个人信息到任何服务器。'
+                    },
+                    noPersonal: {
+                        title: '不收集个人信息',
+                        desc: '我们不收集任何个人信息，包括但不限于：',
+                        items: [
+                            '姓名或联系信息',
+                            '设备信息',
+                            '使用统计',
+                            'PDF 文件或转换后的图片'
+                        ]
+                    }
+                },
+                security: {
+                    title: '数据安全',
+                    desc: '由于所有处理都在您的设备上本地完成：',
+                    items: [
+                        '您的文件永不离开您的设备',
+                        '不在外部服务器存储数据',
+                        '核心功能不需要互联网连接'
+                    ]
+                },
+                contact: {
+                    title: '联系我们',
+                    desc: '如果您对我们的隐私政策有任何问题，请联系我们：'
+                },
+                userGuide: '使用指南',
+                contactLink: '联系我们',
+                copyright: '© 2024 PTI. 保留所有权利。'
+            },
+            ja: {
+                title: 'プライバシーポリシー',
+                subtitle: 'プライバシー保護への取り組み',
+                overview: {
+                    title: '概要',
+                    desc: 'PTI はあなたのプライバシーを保護することを約束します。このプライバシーポリシーでは、アプリケーション使用時のデータ取り扱いについて説明します。'
+                },
+                dataCollection: {
+                    title: 'データ収集',
+                    local: {
+                        title: 'ローカル処理',
+                        desc: 'PTI はすべての PDF ファイルをあなたのデバイス上でローカルに処理します。ファイルや個人情報をサーバーに収集、保存、送信することはありません。'
+                    },
+                    noPersonal: {
+                        title: '個人情報の非収集',
+                        desc: '以下を含む個人情報は一切収集しません：',
+                        items: [
+                            '名前や連絡先情報',
+                            'デバイス情報',
+                            '使用統計',
+                            'PDF ファイルや変換された画像'
+                        ]
+                    }
+                },
+                security: {
+                    title: 'データセキュリティ',
+                    desc: 'すべての処理はデバイス上でローカルに行われるため：',
+                    items: [
+                        'ファイルがデバイスから外部に送信されることはありません',
+                        '外部サーバーにデータを保存しません',
+                        '主要機能にインターネット接続は不要です'
+                    ]
+                },
+                contact: {
+                    title: 'お問い合わせ',
+                    desc: 'プライバシーポリシーについてご質問がある場合は、以下までご連絡ください：'
+                },
+                userGuide: 'ユーザーガイド',
+                contactLink: 'お問い合わせ',
+                copyright: '© 2024 PTI. All rights reserved.'
+            }
+        };
+
+        function updateContent(lang) {
+            const content = translations[lang];
+            if (!content) return;
+
+            document.title = `PTI - ${content.title}`;
+            document.querySelector('.page-title').textContent = content.title;
+            document.querySelector('.page-subtitle').textContent = content.subtitle;
+
+            // Overview section
+            const overview = document.querySelectorAll('.privacy-section')[0];
+            overview.querySelector('h2').textContent = content.overview.title;
+            overview.querySelector('p').textContent = content.overview.desc;
+
+            // Data Collection section
+            const dataCollection = document.querySelectorAll('.privacy-section')[1];
+            dataCollection.querySelector('h2').textContent = content.dataCollection.title;
+            const local = dataCollection.querySelector('h3');
+            local.textContent = content.dataCollection.local.title;
+            local.nextElementSibling.textContent = content.dataCollection.local.desc;
+            const noPersonal = local.nextElementSibling.nextElementSibling;
+            noPersonal.textContent = content.dataCollection.noPersonal.title;
+            noPersonal.nextElementSibling.textContent = content.dataCollection.noPersonal.desc;
+            const items = dataCollection.querySelectorAll('li');
+            content.dataCollection.noPersonal.items.forEach((item, index) => {
+                items[index].textContent = item;
+            });
+
+            // Security section
+            const security = document.querySelectorAll('.privacy-section')[2];
+            security.querySelector('h2').textContent = content.security.title;
+            security.querySelector('p').textContent = content.security.desc;
+            const securityItems = security.querySelectorAll('li');
+            content.security.items.forEach((item, index) => {
+                securityItems[index].textContent = item;
+            });
+
+            // Contact section
+            const contact = document.querySelectorAll('.privacy-section')[3];
+            contact.querySelector('h2').textContent = content.contact.title;
+            contact.querySelector('p').textContent = content.contact.desc;
+
+            // Footer
+            document.querySelector('#guideLink').textContent = content.userGuide;
+            document.querySelector('.footer-links a:last-child').textContent = content.contactLink;
+            document.querySelector('footer p').textContent = content.copyright;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const lang = getLanguageFromURL();
+            updateContent(lang);
+        });
+    </script>
+</body>
+</html> 
