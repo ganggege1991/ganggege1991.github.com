@@ -105,238 +105,239 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="./" class="navbar-brand">
-                <img src="logo/app_icon_1024.png" alt="PTI Logo" class="navbar-logo">
-                <span class="navbar-title">PTI</span>
-            </a>
-        </div>
-    </nav>
-
-    <div class="language-switcher">
-        <a href="?lang=en" data-lang="en">English</a>
-        <a href="?lang=zh" data-lang="zh">中文</a>
-        <a href="?lang=ja" data-lang="ja">日本語</a>
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="./" class="navbar-brand">
+            <img src="logo/app_icon_1024.png" alt="PTI Logo" class="navbar-logo">
+            <span class="navbar-title">PTI</span>
+        </a>
     </div>
+</nav>
 
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-title">PTI User Guide</h1>
-            <p class="page-subtitle">Learn how to use PTI effectively</p>
-        </div>
-    </header>
+<div class="language-switcher">
+    <a href="?lang=en" data-lang="en">English</a>
+    <a href="?lang=zh" data-lang="zh">中文</a>
+    <a href="?lang=ja" data-lang="ja">日本語</a>
+</div>
 
+<header class="header">
     <div class="container">
-        <section id="overview" class="guide-section">
-            <h2>Overview</h2>
-            <p>PTI is a simple and efficient tool for converting PDF files to images. It supports batch conversion, preview functionality, and quality adjustment features.</p>
-        </section>
-
-        <section id="features" class="guide-section">
-            <h2>Key Features</h2>
-            <div class="offline">
-                <h3>Secure & Offline Processing</h3>
-                <p>All processing is done locally on your device. Your files never leave your computer.</p>
-            </div>
-            <div class="performance">
-                <h3>Fast & Efficient</h3>
-                <p>Convert PDFs to high-quality images quickly with optimized performance.</p>
-            </div>
-            <div class="quality">
-                <h3>Quality Control</h3>
-                <p>Choose from multiple quality settings to balance between image quality and file size.</p>
-            </div>
-        </section>
-
-        <section id="howto" class="guide-section">
-            <h2>How to Use</h2>
-            <ol class="steps">
-                <li>Click "Select PDF" to choose your PDF file</li>
-                <div id="screenshot1" class="screenshot">
-                    <img src="image/1.png" alt="PTI Main Interface">
-                </div>
-                <li>Select the desired image quality</li>
-                <div id="screenshot6" class="screenshot">
-                    <img src="image/6.png" alt="PTI File Selection">
-                </div>
-                <li>Preview the conversion result</li>
-                <div id="screenshot3" class="screenshot">
-                    <img src="image/3.png" alt="PTI Preview Mode">
-                </div>
-                <li>Click "Save" to export the images</li>
-            </ol>
-        </section>
+        <h1 class="page-title">PTI User Guide</h1>
+        <p class="page-subtitle">Learn how to use PTI effectively</p>
     </div>
+</header>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="privacy-policy/index.html" id="privacyLink">Privacy Policy</a>
-                <a href="mailto:hggxgang@163.com">Contact</a>
-            </div>
-            <p>&copy; 2024 PTI. All rights reserved.</p>
+<div class="container">
+    <section id="overview" class="guide-section">
+        <h2>Overview</h2>
+        <p>PTI is a simple and efficient tool for converting PDF files to images. It supports batch conversion, preview
+            functionality, and quality adjustment features.</p>
+    </section>
+
+    <section id="features" class="guide-section">
+        <h2>Key Features</h2>
+        <div class="offline">
+            <h3>Secure & Offline Processing</h3>
+            <p>All processing is done locally on your device. Your files never leave your computer.</p>
         </div>
-    </footer>
+        <div class="performance">
+            <h3>Fast & Efficient</h3>
+            <p>Convert PDFs to high-quality images quickly with optimized performance.</p>
+        </div>
+        <div class="quality">
+            <h3>Quality Control</h3>
+            <p>Choose from multiple quality settings to balance between image quality and file size.</p>
+        </div>
+    </section>
 
-    <script src="js/common.js"></script>
-    <script>
-        const translations = {
-            en: {
-                title: 'PTI User Guide',
-                subtitle: 'Learn how to use PTI effectively',
-                overview: {
-                    title: 'Overview',
-                    desc: 'PTI is a simple and efficient tool for converting PDF files to images. It supports batch conversion, preview functionality, and quality adjustment features.'
-                },
-                features: {
-                    title: 'Key Features',
-                    offline: {
-                        title: 'Secure & Offline Processing',
-                        desc: 'All processing is done locally on your device. Your files never leave your computer.'
-                    },
-                    performance: {
-                        title: 'Fast & Efficient',
-                        desc: 'Convert PDFs to high-quality images quickly with optimized performance.'
-                    },
-                    quality: {
-                        title: 'Quality Control',
-                        desc: 'Choose from multiple quality settings to balance between image quality and file size.'
-                    }
-                },
-                howTo: {
-                    title: 'How to Use',
-                    steps: [
-                        'Click "Select PDF" to choose your PDF file',
-                        'Select the desired image quality',
-                        'Preview the conversion result',
-                        'Click "Save" to export the images'
-                    ]
-                },
-                privacyPolicy: 'Privacy Policy',
-                contact: 'Contact',
-                copyright: '© 2024 PTI. All rights reserved.'
+    <section id="howto" class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="steps">
+            <li>Click "Select PDF" to choose your PDF file</li>
+            <div id="screenshot1" class="screenshot">
+                <img src="image/1.png" alt="PTI Main Interface">
+            </div>
+            <li>Select the desired image quality</li>
+            <div id="screenshot6" class="screenshot">
+                <img src="image/6.png" alt="PTI File Selection">
+            </div>
+            <li>Preview the conversion result</li>
+            <div id="screenshot3" class="screenshot">
+                <img src="image/3.png" alt="PTI Preview Mode">
+            </div>
+            <li>Click "Save" to export the images</li>
+        </ol>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="privacy-policy/index.html" id="privacyLink">Privacy Policy</a>
+            <a href="mailto:hggxgang@163.com">Contact</a>
+        </div>
+        <p>&copy; 2024 PTI. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script>
+    const translations = {
+        en: {
+            title: 'PTI User Guide',
+            subtitle: 'Learn how to use PTI effectively',
+            overview: {
+                title: 'Overview',
+                desc: 'PTI is a simple and efficient tool for converting PDF files to images. It supports batch conversion, preview functionality, and quality adjustment features.'
             },
-            zh: {
-                title: 'PTI 使用指南',
-                subtitle: '了解如何有效使用 PTI',
-                overview: {
-                    title: '概述',
-                    desc: 'PTI 是一个简单高效的 PDF 转图片工具。支持批量转换、预览功能和质量调节。'
+            features: {
+                title: 'Key Features',
+                offline: {
+                    title: 'Secure & Offline Processing',
+                    desc: 'All processing is done locally on your device. Your files never leave your computer.'
                 },
-                features: {
-                    title: '主要特性',
-                    offline: {
-                        title: '安全离线处理',
-                        desc: '所有处理在本地完成，文件永不离开您的电脑。'
-                    },
-                    performance: {
-                        title: '快速高效',
-                        desc: '快速将 PDF 转换为高质量图片，性能优化。'
-                    },
-                    quality: {
-                        title: '质量控制',
-                        desc: '多种质量设置可选，平衡图片质量和文件大小。'
-                    }
+                performance: {
+                    title: 'Fast & Efficient',
+                    desc: 'Convert PDFs to high-quality images quickly with optimized performance.'
                 },
-                howTo: {
-                    title: '使用方法',
-                    steps: [
-                        '点击"选择 PDF"选择您的 PDF 文件',
-                        '选择所需的图片质量',
-                        '预览转换结果',
-                        '点击"保存"导出图片'
-                    ]
-                },
-                privacyPolicy: '隐私政策',
-                contact: '联系我们',
-                copyright: '© 2024 PTI. 保留所有权利。'
+                quality: {
+                    title: 'Quality Control',
+                    desc: 'Choose from multiple quality settings to balance between image quality and file size.'
+                }
             },
-            ja: {
-                title: 'PTI ユーザーガイド',
-                subtitle: 'PTI の効果的な使用方法',
-                overview: {
-                    title: '概要',
-                    desc: 'PTI は、PDFファイルを画像に変換するためのシンプルで効率的なツールです。バッチ変換、プレビュー機能、品質調整をサポートしています。'
+            howTo: {
+                title: 'How to Use',
+                steps: [
+                    'Click "Select PDF" to choose your PDF file',
+                    'Select the desired image quality',
+                    'Preview the conversion result',
+                    'Click "Save" to export the images'
+                ]
+            },
+            privacyPolicy: 'Privacy Policy',
+            contact: 'Contact',
+            copyright: '© 2024 PTI. All rights reserved.'
+        },
+        zh: {
+            title: 'PTI 使用指南',
+            subtitle: '了解如何有效使用 PTI',
+            overview: {
+                title: '概述',
+                desc: 'PTI 是一个简单高效的 PDF 转图片工具。支持批量转换、预览功能和质量调节。'
+            },
+            features: {
+                title: '主要特性',
+                offline: {
+                    title: '安全离线处理',
+                    desc: '所有处理在本地完成，文件永不离开您的电脑。'
                 },
-                features: {
-                    title: '主な機能',
-                    offline: {
-                        title: '安全なオフライン処理',
-                        desc: 'すべての処理はローカルで行われ、ファイルがコンピュータから外部に送信されることはありません。'
-                    },
-                    performance: {
-                        title: '高速で効率的',
-                        desc: 'PDFを高品質な画像に素早く変換、最適化されたパフォーマンス。'
-                    },
-                    quality: {
-                        title: '品質コントロール',
-                        desc: '画質とファイルサイズのバランスを取る複数の品質設定。'
-                    }
+                performance: {
+                    title: '快速高效',
+                    desc: '快速将 PDF 转换为高质量图片，性能优化。'
                 },
-                howTo: {
-                    title: '使用方法',
-                    steps: [
-                        '「PDF選択」をクリックしてPDFファイルを選択',
-                        '希望の画質を選択',
-                        '変換結果をプレビュー',
-                        '「保存」をクリックして画像を出力'
-                    ]
+                quality: {
+                    title: '质量控制',
+                    desc: '多种质量设置可选，平衡图片质量和文件大小。'
+                }
+            },
+            howTo: {
+                title: '使用方法',
+                steps: [
+                    '点击"选择 PDF"选择您的 PDF 文件',
+                    '选择所需的图片质量',
+                    '预览转换结果',
+                    '点击"保存"导出图片'
+                ]
+            },
+            privacyPolicy: '隐私政策',
+            contact: '联系我们',
+            copyright: '© 2024 PTI. 保留所有权利。'
+        },
+        ja: {
+            title: 'PTI ユーザーガイド',
+            subtitle: 'PTI の効果的な使用方法',
+            overview: {
+                title: '概要',
+                desc: 'PTI は、PDFファイルを画像に変換するためのシンプルで効率的なツールです。バッチ変換、プレビュー機能、品質調整をサポートしています。'
+            },
+            features: {
+                title: '主な機能',
+                offline: {
+                    title: '安全なオフライン処理',
+                    desc: 'すべての処理はローカルで行われ、ファイルがコンピュータから外部に送信されることはありません。'
                 },
-                privacyPolicy: 'プライバシーポリシー',
-                contact: 'お問い合わせ',
-                copyright: '© 2024 PTI. All rights reserved.'
-            }
-        };
+                performance: {
+                    title: '高速で効率的',
+                    desc: 'PDFを高品質な画像に素早く変換、最適化されたパフォーマンス。'
+                },
+                quality: {
+                    title: '品質コントロール',
+                    desc: '画質とファイルサイズのバランスを取る複数の品質設定。'
+                }
+            },
+            howTo: {
+                title: '使用方法',
+                steps: [
+                    '「PDF選択」をクリックしてPDFファイルを選択',
+                    '希望の画質を選択',
+                    '変換結果をプレビュー',
+                    '「保存」をクリックして画像を出力'
+                ]
+            },
+            privacyPolicy: 'プライバシーポリシー',
+            contact: 'お問い合わせ',
+            copyright: '© 2024 PTI. All rights reserved.'
+        }
+    };
 
-        function updateContent(lang) {
-            const content = translations[lang];
-            if (!content) return;
+    function updateContent(lang) {
+        const content = translations[lang];
+        if (!content) return;
 
-            document.title = `PTI - ${content.title}`;
-            document.querySelector('.page-title').textContent = content.title;
-            document.querySelector('.page-subtitle').textContent = content.subtitle;
+        document.title = `PTI - ${content.title}`;
+        document.querySelector('.page-title').textContent = content.title;
+        document.querySelector('.page-subtitle').textContent = content.subtitle;
 
-            // Overview section
-            const overview = document.querySelector('#overview');
-            overview.querySelector('h2').textContent = content.overview.title;
-            overview.querySelector('p').textContent = content.overview.desc;
+        // Overview section
+        const overview = document.querySelector('#overview');
+        overview.querySelector('h2').textContent = content.overview.title;
+        overview.querySelector('p').textContent = content.overview.desc;
 
-            // Features section
-            const features = document.querySelector('#features');
-            features.querySelector('h2').textContent = content.features.title;
-            features.querySelector('.offline h3').textContent = content.features.offline.title;
-            features.querySelector('.offline p').textContent = content.features.offline.desc;
-            features.querySelector('.performance h3').textContent = content.features.performance.title;
-            features.querySelector('.performance p').textContent = content.features.performance.desc;
-            features.querySelector('.quality h3').textContent = content.features.quality.title;
-            features.querySelector('.quality p').textContent = content.features.quality.desc;
+        // Features section
+        const features = document.querySelector('#features');
+        features.querySelector('h2').textContent = content.features.title;
+        features.querySelector('.offline h3').textContent = content.features.offline.title;
+        features.querySelector('.offline p').textContent = content.features.offline.desc;
+        features.querySelector('.performance h3').textContent = content.features.performance.title;
+        features.querySelector('.performance p').textContent = content.features.performance.desc;
+        features.querySelector('.quality h3').textContent = content.features.quality.title;
+        features.querySelector('.quality p').textContent = content.features.quality.desc;
 
-            // How to use section
-            const howTo = document.querySelector('#howto');
-            howTo.querySelector('h2').textContent = content.howTo.title;
-            const steps = howTo.querySelectorAll('.steps li');
-            content.howTo.steps.forEach((step, index) => {
-                steps[index].textContent = step;
-            });
+        // How to use section
+        const howTo = document.querySelector('#howto');
+        howTo.querySelector('h2').textContent = content.howTo.title;
+        const steps = howTo.querySelectorAll('.steps li');
+        content.howTo.steps.forEach((step, index) => {
+            steps[index].textContent = step;
+        });
 
-            // Footer
-            document.querySelector('#privacyLink').textContent = content.privacyPolicy;
-            document.querySelector('.footer-links a:last-child').textContent = content.contact;
-            document.querySelector('footer p').textContent = content.copyright;
+        // Footer
+        document.querySelector('#privacyLink').textContent = content.privacyPolicy;
+        document.querySelector('.footer-links a:last-child').textContent = content.contact;
+        document.querySelector('footer p').textContent = content.copyright;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const lang = getLanguageFromURL();
+        const privacyLink = document.getElementById('privacyLink');
+
+        if (privacyLink) {
+            const baseHref = privacyLink.getAttribute('href').split('?')[0];
+            privacyLink.href = `${baseHref}?lang=${lang}`;
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const lang = getLanguageFromURL();
-            const privacyLink = document.getElementById('privacyLink');
-
-            if (privacyLink) {
-                const baseHref = privacyLink.getAttribute('href').split('?')[0];
-                privacyLink.href = `${baseHref}?lang=${lang}`;
-            }
-
-            updateContent(lang);
-        });
-    </script>
+        updateContent(lang);
+    });
+</script>
 </body>
 </html> 
